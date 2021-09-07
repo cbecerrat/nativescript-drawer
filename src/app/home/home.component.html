@@ -1,13 +1,13 @@
-<ActionBar class="action-bar">
-    <NavigationButton visibility="hidden"></NavigationButton>
-    <GridLayout columns="50, *">
-        <Label class="action-bar-title" text="Home" colSpan="2"></Label>
-
-        <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
+<TabView androidTabsPosition="bottom">
+    <GridLayout *tabItem="{ title: 'Browse' }">
+        <page-router-outlet name="browseTab"></page-router-outlet>
     </GridLayout>
-</ActionBar>
 
-<GridLayout class="page__content">
-  <Label class="page__content-icon fas" text="&#xf015;"></Label>
-  <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
-</GridLayout>
+    <GridLayout *tabItem="{ title: 'Search' }">
+        <page-router-outlet name="searchTab"></page-router-outlet>
+    </GridLayout>
+
+    <GridLayout *tabItem="{ title: 'Home' }">
+        <page-router-outlet name="homeTab"></page-router-outlet>
+    </GridLayout>
+</TabView>

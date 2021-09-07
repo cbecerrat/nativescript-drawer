@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Application } from '@nativescript/core';
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 
 @Component({
-  selector: 'Home',
-  templateUrl: './home.component.html',
+  selector: 'HomeDefault',
+  templateUrl: './home-default.component.html',
 })
-export class HomeComponent implements OnInit {
-  constructor(private router: Router) {
-    console.log('home constructor');
-    console.log(this.router.url);
+export class HomeDefault implements OnInit {
+  constructor() {
+    console.log('home default');
   }
 
   ngOnInit(): void {

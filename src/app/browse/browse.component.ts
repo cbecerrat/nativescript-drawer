@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core'
-import { RadSideDrawer } from 'nativescript-ui-sidedrawer'
-import { Application } from '@nativescript/core'
+import { Component, OnInit } from '@angular/core';
+import { Application } from '@nativescript/core';
+import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 
 @Component({
   selector: 'Browse',
@@ -16,7 +16,7 @@ export class BrowseComponent implements OnInit {
   }
 
   onDrawerButtonTap(): void {
-    const sideDrawer = <RadSideDrawer>Application.getRootView()
-    sideDrawer.showDrawer()
+    const sideDrawer = <RadSideDrawer>Application.getRootView();
+    sideDrawer.showDrawer();
   }
 }
