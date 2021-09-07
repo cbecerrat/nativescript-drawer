@@ -3,7 +3,7 @@ import { Application } from '@nativescript/core';
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 
 @Component({
-  selector: 'HomeDefault',
+  selector: 'sn-home-default',
   templateUrl: './home-default.component.html',
 })
 export class HomeDefault implements OnInit {

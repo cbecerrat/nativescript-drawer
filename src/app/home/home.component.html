@@ -1,13 +1,25 @@
-<TabView androidTabsPosition="bottom">
-    <GridLayout *tabItem="{ title: 'Browse' }">
-        <page-router-outlet name="browseTab"></page-router-outlet>
-    </GridLayout>
-
-    <GridLayout *tabItem="{ title: 'Search' }">
-        <page-router-outlet name="searchTab"></page-router-outlet>
-    </GridLayout>
-
-    <GridLayout *tabItem="{ title: 'Home' }">
-        <page-router-outlet name="homeTab"></page-router-outlet>
-    </GridLayout>
+<TabView selectedIndex="0" androidTabsPosition="bottom">
+    <StackLayout *tabItem="{title: 'First Tab', iconSource: 'res://icon'}">
+        <StackLayout>
+            <sn-home-default></sn-home-default>
+        </StackLayout>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Second Tab', iconSource: 'res://icon'}">
+        <StackLayout>
+            <label
+                text="Second Tab"
+                textWrap="true"
+                class="m-15 h2 text-left"
+                color="blue"></label>
+        </StackLayout>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Third Tab', iconSource: 'res://icon'}">
+        <StackLayout>
+            <label
+                text="Third Tab"
+                textWrap="true"
+                class="m-15 h2 text-left"
+                color="blue"></label>
+        </StackLayout>
+    </StackLayout>
 </TabView>
