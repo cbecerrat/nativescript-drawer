@@ -8,7 +8,7 @@ import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 })
 export class HomeDefault implements OnInit {
   constructor() {
-    console.log('home default');
+
   }
 
   ngOnInit(): void {

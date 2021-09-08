@@ -1,16 +1,16 @@
-<TabView selectedIndex="0" androidTabsPosition="bottom">
-    <StackLayout *tabItem="{title: 'First Tab', iconSource: 'res://icon'}">
+<TabView selectedIndex="0" androidTabsPosition="bottom" class="fas">
+    <StackLayout *tabItem="{title: 'First Tab &#xf3ed;', iconSource: 'res://icon'}">
         <StackLayout>
             <sn-home-default></sn-home-default>
         </StackLayout>
     </StackLayout>
-    <StackLayout *tabItem="{title: 'Second Tab', iconSource: 'res://icon'}">
+    <StackLayout *tabItem="{title: 'Second Tab &#xf015;', iconSource: 'res://icon'}">
         <StackLayout>
             <label
-                text="Second Tab"
+                text="&#xf015;"
                 textWrap="true"
-                class="m-15 h2 text-left"
-                color="blue"></label>
+                class="m-15 h2 text-center fas">
+            </label>
         </StackLayout>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Third Tab', iconSource: 'res://icon'}">
@@ -18,7 +18,7 @@
             <label
                 text="Third Tab"
                 textWrap="true"
-                class="m-15 h2 text-left"
+                class="m-15 h2 text-center"
                 color="blue"></label>
         </StackLayout>
     </StackLayout>
