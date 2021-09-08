@@ -3,9 +3,11 @@
     <GridLayout columns="50, *">
         <Label class="action-bar-title" text="Home" colSpan="2"></Label>
 
-        <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
+        <StackLayout orientation="horizontal">
+            <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
 
-        <Label class="fas" text="&#xf3ed;" (tap)="onDrawerButtonTap()"></Label>
+            <Label class="fas" text="&#xf3ed;" (tap)="onDrawerButtonTap()"></Label>
+        </StackLayout>
     </GridLayout>
 </ActionBar>
 

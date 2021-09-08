@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SelectedIndexChangedEventData } from '@nativescript-community/ui-material-bottom-navigation';
 import { Application } from '@nativescript/core';
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 
@@ -8,6 +9,8 @@ import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
   templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit {
+  selectedIndex = 0;
+
   constructor(private router: Router) {
 
   }
@@ -19,5 +22,9 @@ export class HomeComponent implements OnInit {
   onDrawerButtonTap(): void {
     const sideDrawer = <RadSideDrawer>Application.getRootView();
     sideDrawer.showDrawer();
+  }
+
+  changed(event: SelectedIndexChangedEventData): void {
+    this.selectedIndex = event.newIndex;
   }
 }

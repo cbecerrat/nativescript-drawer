@@ -1,25 +1,44 @@
-<TabView selectedIndex="0" androidTabsPosition="bottom" class="fas">
-    <StackLayout *tabItem="{title: 'First Tab &#xf3ed;', iconSource: 'res://icon'}">
-        <StackLayout>
+<!-- https://github.com/nativescript-community/ui-material-components/tree/master/packages/bottom-navigation -->
+<MDBottomNavigation selectedIndex="{{selectedIndex}}" (selectedIndexChanged)="changed($event)" tabsPosition="top">
+    <!-- The bottom tab UI is created via TabStrip (the containier) and TabStripItem (for each tab)-->
+    <MDTabStrip>
+        <MDTabStripItem [class.bg-primary]="selectedIndex === 0">
+            <Label text="Home"></Label>
+            <Image src="font://&#xf015;" class="fas"></Image>
+        </MDTabStripItem>
+        <MDTabStripItem [class.bg-primary]="selectedIndex === 1">
+            <Label text="Account"></Label>
+            <Image src="font://&#xf007;" class="fas"></Image>
+        </MDTabStripItem>
+        <MDTabStripItem [class.bg-primary]="selectedIndex === 2">
+            <Label text="Search"></Label>
+            <Image src="font://&#xf00e;" class="fas"></Image>
+        </MDTabStripItem>
+        <MDTabStripItem [class.bg-primary]="selectedIndex === 3">
+            <Label text="Search"></Label>
+            <Image src="font://&#xf00e;" class="fas"></Image>
+        </MDTabStripItem>
+    </MDTabStrip>
+
+    <!-- The number of TabContentItem components should corespond to the number of TabStripItem components -->
+    <MDTabContentItem>
+        <GridLayout>
             <sn-home-default></sn-home-default>
-        </StackLayout>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Second Tab &#xf015;', iconSource: 'res://icon'}">
-        <StackLayout>
-            <label
-                text="&#xf015;"
-                textWrap="true"
-                class="m-15 h2 text-center fas">
-            </label>
-        </StackLayout>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Third Tab', iconSource: 'res://icon'}">
-        <StackLayout>
-            <label
-                text="Third Tab"
-                textWrap="true"
-                class="m-15 h2 text-center"
-                color="blue"></label>
-        </StackLayout>
-    </StackLayout>
-</TabView>
+        </GridLayout>
+    </MDTabContentItem>
+    <MDTabContentItem>
+        <GridLayout>
+            <Label text="Account Page" class="h2 text-center"></Label>
+        </GridLayout>
+    </MDTabContentItem>
+    <MDTabContentItem>
+        <GridLayout>
+            <Label text="Search Page" class="h2 text-center"></Label>
+        </GridLayout>
+    </MDTabContentItem>
+    <MDTabContentItem>
+        <GridLayout>
+            <Label text="Search Page" class="h2 text-center"></Label>
+        </GridLayout>
+    </MDTabContentItem>
+</MDBottomNavigation>
